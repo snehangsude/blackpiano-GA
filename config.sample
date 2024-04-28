@@ -1,0 +1,22 @@
+property : {{ string value of property ID }}
+database_name : {{ string value of database name }}
+
+date_range:
+  start_date: {{ string value of start date }}
+  end_date: {{ string value of end date }}
+
+dimension:
+  - city
+  - country
+  - browser
+  - add more in similar hierachy 
+
+metrics:
+  - activeUsers
+  - sessions
+  - bounceRate
+  - add more in similar hierachy 
+
+query: UPDATE table_name SET col_name = "some_value" WHERE col_name = 'some_value'
+
+select_query: SELECT * FROM table_name LIMIT 10
