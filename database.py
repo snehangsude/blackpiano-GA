@@ -11,9 +11,15 @@ class Database:
         self.connection = None
 
     def connect(self):
+        '''
+        Creates a connection to the db based on the path that is passed
+        '''
         self.connection = duckdb.connect(self.db_path)
 
     def table_exists(self, table_name):
+        '''
+        Checks if the table exists and returns True if it does
+        '''
         result = self.connection.execute(f"SELECT * FROM information_schema.tables WHERE table_name='{table_name}'")
         return len(result.fetchall()) > 0
 

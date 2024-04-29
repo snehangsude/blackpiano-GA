@@ -5,8 +5,10 @@ from analytics_client import AnalyticsClient
 from database import Database
 from config_reader import read_config
 
+# Read the config file for configurations
 config = read_config('config.yml')
 
+# Set each configuration to respective varibles
 property_digit = config['property']
 database_name = config['database_name']
 start_date = config['date_range']['start_date']
@@ -39,7 +41,7 @@ if __name__ == "__main__":
     asyncio.run(main_executor())
     db = Database(f'{database_name}.db')
     db.connect()
-    table = PrettyTable()
+    table = PrettyTable() # Used pretty table for a tabular view of the data
 
     table.field_names = ['id', 'city', 'country', 'browser', 'activeUsers', 'sessions', 'bounceRate']
     rows = db.select_data(view_query)
