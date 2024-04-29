@@ -28,7 +28,7 @@ Before using this pipeline script, ensure that you have the following prerequisi
 
 ### Installation
 
-1. Download and open the zipped folder.
+1. Open a folder and run `git clone https://github.com/snehangsude/blackpiano-GA.git`
 2. Create an environment
     - For Ubuntu: 
     `python3 -m venv <name_of_the_env>`
@@ -88,4 +88,4 @@ These are the files which take care of each bit of the execution.
 
 -   `requirements.txt`
     <br>
-    > This is all the packages and dependencies that are required to be installed for the program to be run if you are downloading the zip and executing the code.
+    > This is all the packages and dependencies that are required to be installed for the program to be run if you are using `git clone` and executing the code.
